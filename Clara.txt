@@ -1,0 +1,64 @@
+Crear un nuevo repositorio
+$ git init 
+al ejecutar el comando, se crea un nuevo subdirectorio.git en la carpeta de trabajo actual y 
+una nueva rama principal.
+
+$ git status infomación de la rama actual 
+• Si la rama actual está actualizada
+• Si hay algo para confirmar, enviar o recibir (pull).
+• Si hay archivos en preparación (staged), sin preparación(unstaged) o que no están 
+recibiendo seguimiento (untracked)
+• Si hay archivos creados, modificados o eliminados
+
+Añadir un único archivo:
+$ git add <archivo>
+Añadir todo de una vez:
+$ git add 
+(aparecen en rojo si no estan agregados y en verde cuando estan agregados)
+
+Guardar cambios o subir un archivo/proyecto
+$ git commit 
+$ git commit -m "mensaje"
+Establece un punto de control en el proceso de desallorro al cual podes volver. 
+Escribimos un mensaje corto para explicar qué hemos desarrollado o modificado
+
+Vincular con github
+$ git remote add <name> <url>
+$ git remote add origin <url> (se copia delgithub)
+$git remote set-url origin https://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@github.com/ClaraRazzetto/NOMBRE-DEL-PROYECTO.git
+para settear el url con el token
+
+Enviar cambios o archivos al servidor remoto 
+$ git push <nombre-remoto> <nombre-de-tu-rama>
+$ git push origin <nombre-de-tu-rama>
+
+Trabajar con ramas (creacion,borrado, etc)
+Para visualizar las ramas:
+$ git branch
+Crear una nueva rama
+$ git checkout -b nombre_de_tu_branch
+
+descripcion detallada de las ramas $ git show-branch
+
+pasar de una rama a otra $git checkout nombre_de_tu_branch
+
+subir una rama al repositorio remoto $ git push origin nombre_de_tu_branch
+
+fusionar ramas: $ git merge nombre_rama
+cuando ejecutamos estos comando se abre un editor para introducir comentario
+Para salir del editor ESC y escribimos $ :q
+o hacemos directamente este otro comando
+$ git merge nombre_rama -m “Esto es un merge con mensaje”
+
+$ git branch -d nombrerama para borrar una grama en local puede que no funcione si hacemos cambios que no se hayan salvado en el repositorio remoto,o no se hayan fusionado con otras ramas
+$ gir branch -D nombrerama para borrar (la otra opcion es más segura)
+
+eliminar en remoto
+$git push origin --delete nombrerama
+
+$git checkout -b nombrerama para descargar una rama de remoto
+
+$git pull origin ramaadescargar para conseguir todo lo que esté en esta rama
+
+
+
